@@ -22,13 +22,495 @@
 
         <slyd id="beginning">
           <div v-list>
-            <h1>JScamp</h1>
+            <h1>Prototyping</h1>
+            <h3>surpassing the uncanny valley</h3>
           </div>
         </slyd>
 
-        <slyd id="test">
+        <slyd id="target-ux">
           <div v-list>
-            <h3>works</h3>
+            <h2 class="text_color-1">Target UX</h2>
+            <ol>
+              <li>Mobile or desktop ready</li>
+              <li>Launch from coveted system drawers</li>
+              <li>Load instant & full screen</li>
+              <li>Demonstrate flow</li>
+            </ol>
+          </div>
+        </slyd>
+
+        <slyd id="how">
+          <div v-list>
+            <h2 class="text_color-1">How</h2>
+            <ol>
+              <li>A manifest</li>
+              <li>Static assets</li>
+              <li>The platform</li>
+            </ol>
+          </div>
+        </slyd>
+
+        <slyd id="proof" two-up-video-right>
+          <!-- todo: consider showing desktop PWA as well -->
+          <div v-list>
+            <h2 class="brand_color-1">Proof</h2>
+            <p lead text-left>Fooled clients and bosses for many moons with prototypes like this</p>
+          </div>
+          <img fit-height src="./videos/vault-v2_30fps.gif" loading="lazy"/>
+        </slyd>
+
+        <slyd id="ready-to-dive-in">
+          <div v-list>
+            <h2 class="text_color-1">Rewind</h2>
+            <h3>Layer by layer let's enhance a prototype</h3>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 2: manifest -->
+      <slyds>
+        
+        <slyd id="manifest">
+          <div v-list>
+            <h1 class="text_color-1">manifest.json</h1>
+            <h2>PWA entry point</h2>
+          </div>
+        </slyd>
+
+        <slyd id="manifest-entry">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">Load It</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="manifest" href="/manifest.json"&#62;
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="manifest-name">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">App Name</h3>
+            <pre class="language-json line-numbers show-language"><code>
+              {
+                "name": "Safe",
+                "short_name": "Safe",
+              }
+            </code></pre>
+            <p lead push-top="2">Used on device homescreen</p>
+          </div>
+        </slyd>
+
+        <slyd id="manifest-theme">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">App Theme</h3>
+            <pre class="language-json line-numbers show-language"><code>
+              {
+                "theme_color": "#ffffff",
+                "background_color": "#ffffff",
+              }
+            </code></pre>
+            <p lead push-top="2">OS tints</p>
+          </div>
+        </slyd>
+
+        <slyd id="manifest-brand">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">App Icons</h3>
+            <pre class="language-json line-numbers show-language"><code>
+              {
+                "icons": [
+                  {
+                    "src": "/icons/192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png",
+                    "density": "4.0"
+                  },
+                  ...
+                ]
+              }
+            </code></pre>
+            <p lead push-top="2">Used on device homescreen</p>
+          </div>
+        </slyd>
+
+        <slyd id="manifest-extras">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">PWA Extras</h3>
+            <pre class="language-json line-numbers show-language"><code>
+              {
+                "display": "standalone",
+                "orientation": "portrait",
+                "start_url": "/index.html",
+              }
+            </code></pre>
+            <p lead push-top="2">Customize for your UX</p>
+          </div>
+        </slyd>
+
+        <slyd id="manifest-devtools" two-up-video-right>
+          <div v-list>
+            <h2 class="brand_color-1">Verify</h2>
+            <p lead text-left>Chrome Devtools can verify your work before you install on a device</p>
+          </div>
+          <img fit-height src="#" loading="lazy"/>
+        </slyd>
+
+        <slyd id="manifest-value-demo" three-up>
+          <video fit-height src="./videos/android-pwa-verify.mp4" loading="lazy" autoplay muted loop controls></video>
+          <div v-list between>
+            <h4 arrow-left>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+              Android
+            </h4>
+            <h4 arrow-right>
+              iOS
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+            </h4>
+          </div>
+          <video fit-height src="./videos/ios-pwa-verify.mp4" loading="lazy" autoplay muted loop controls></video>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 3: meta -->
+      <slyds>
+        
+        <slyd id="meta">
+          <div v-list>
+            <h1 class="text_color-1">&#60;meta&#62;</h1>
+            <h2>Inform the render engine</h2>
+          </div>
+        </slyd>
+
+        <slyd id="meta-viewport">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">Viewport</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;meta name="viewport" content="initial-scale=1" /&#62;
+            </code></pre>
+            <ul push-top="2">
+              <li>Page width to device width</li>
+              <li>Remove 300ms tap delay</li>
+            </ul>
+          </div>
+        </slyd>
+
+        <slyd id="meta-web-app">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">iOS Web App</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;meta name="mobile-web-app-capable" content="yes" /&#62;
+            </code></pre>
+            <ul push-top="2">
+              <li>Legacy?</li>
+              <li>Fullscreen</li>
+              <li>Links need love</li>
+            </ul>
+          </div>
+        </slyd>
+
+        <slyd id="meta-theme">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">App Theme</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;meta name="apple-mobile-web-app-status-bar-style" content="default" /&#62;
+              &#60;meta name="theme-color" content="#ffffff" /&#62;
+              &#60;meta name="msapplication-TileColor" content="#ffffff" /&#62;
+            </code></pre>
+            <p lead push-top="2">OS tints</p>
+          </div>
+        </slyd>
+
+        <slyd id="meta-brand">
+          <div v-list>
+            <h3 push-bottom="2" class="brand_color-1">App Brand</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="apple-touch-icon" href="/assets/icon.png" /&#62;
+              &#60;link rel="apple-touch-startup-image" href="/assets/icons/startup.png" /&#62;
+              &#60;link rel="icon" sizes="192x192" href="/assets/icon.png" /&#62;
+              &#60;meta name="application-name" content="Safe" /&#62;
+              &#60;meta name="msapplication-TileImage" content="/assets/icons/ms-touch-icon.png" /&#62;
+            </code></pre>
+            <p lead push-top="2">OS icons & launch assets</p>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 4: icons -->
+      <slyds>
+        
+        <slyd id="icons">
+          <div v-list>
+            <h1 class="text_color-1">Icons</h1>
+            <h2>1<sup>st</sup> Impressions</h2>
+          </div>
+        </slyd>
+
+        <slyd id="icons-demo">
+          <div v-list>
+            <h2 class="text_color-1">demo</h2>
+          </div>
+        </slyd>
+
+        <slyd id="icons-tips">
+          <div v-list>
+            <h2 class="text_color-1">Tips n' Tricks</h2>
+            <ul>
+              <li>Generator sites</li>
+              <li>Build scripts</li>
+              <li>Minimalism</li>
+            </ul>
+            <p lead push-top="1">From my experience, long term you'll need to certain aspects by hand</p>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 5: splash -->
+      <slyds>
+        
+        <slyd id="splash">
+          <div v-list>
+            <h1 class="text_color-1">Splash</h1>
+            <h2>2<sup>nd</sup> Impressions</h2>
+          </div>
+        </slyd>
+
+        <slyd id="splash-demo">
+          <div v-list>
+            <h2 class="text_color-1">demo</h2>
+          </div>
+        </slyd>
+
+        <slyd id="splash-tips">
+          <div v-list>
+            <h2 class="text_color-1">Tips n' Tricks</h2>
+            <ul>
+              <li>Generator sites</li>
+              <li>Build scripts</li>
+              <li>Android & Windows</li>
+            </ul>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 6: prerender -->
+      <slyds>
+        
+        <slyd id="prerender">
+          <div v-list>
+            <h1 class="text_color-1">Prerender</h1>
+            <h2>SSR, compile, build, etc</h2>
+          </div>
+        </slyd>
+
+        <slyd id="prerender-why">
+          <div v-list>
+            <h2 class="text_color-1">Why?</h2>
+            <ul>
+              <li>Less work on browser</li>
+              <li>Empower preload/prefetch/cache</li>
+            </ul>
+          </div>
+        </slyd>
+
+        <slyd id="prerender-demo">
+          <div v-list>
+            <h2 class="text_color-1">demo</h2>
+          </div>
+        </slyd>
+
+        <slyd id="prerender-results">
+          <div v-list>
+            <h2 class="text_color-1">Goal</h2>
+            <p lead>to create an experience that competes with native we have to cut corners and <span highlight>make tradeoffs</span> across the board</p>
+            <p>We're maintaining an illusion<br>not building for production</p>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 7: lazyload -->
+      <slyds>
+        
+        <slyd id="lazyload">
+          <div v-list>
+            <h1 class="text_color-1">lazyload</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 8: preload -->
+      <slyds>
+        
+        <slyd id="preload">
+          <div v-list>
+            <h1 class="text_color-1">preload</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 9: offline -->
+      <slyds>
+        
+        <slyd id="offline">
+          <div v-list>
+            <h1 class="text_color-1">offline</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 10: fonts -->
+      <slyds>
+        
+        <slyd id="fonts">
+          <div v-list>
+            <h1 class="text_color-1">system fonts</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 11: css -->
+      <slyds>
+        
+        <slyd id="css">
+          <div v-list>
+            <h1 class="text_color-1">CSS</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 12: https -->
+      <slyds>
+        
+        <slyd id="https">
+          <div v-list>
+            <h1 class="text_color-1">HTTPS</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 13: bundle -->
+      <slyds>
+        
+        <slyd id="bundle">
+          <div v-list>
+            <h1 class="text_color-1">bundle</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 14: defer -->
+      <slyds>
+        
+        <slyd id="defer">
+          <div v-list>
+            <h1 class="text_color-1">defer</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 15: paintlock -->
+      <slyds>
+        
+        <slyd id="paintlock">
+          <div v-list>
+            <h1 class="text_color-1">paintlock</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 16: retina -->
+      <slyds>
+        
+        <slyd id="retina">
+          <div v-list>
+            <h1 class="text_color-1">retina images</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 17: service worker -->
+      <slyds>
+        
+        <slyd id="service-worker">
+          <div v-list>
+            <h1 class="text_color-1">service worker</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 18: offline-ux -->
+      <slyds>
+        
+        <slyd id="offline-ux">
+          <div v-list>
+            <h1 class="text_color-1">offline ux</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 19: pull-to-refresh -->
+      <slyds>
+        
+        <slyd id="pull-to-refresh">
+          <div v-list>
+            <h1 class="text_color-1">pull-to-refresh</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 20: ios-links -->
+      <slyds>
+        
+        <slyd id="ios-links">
+          <div v-list>
+            <h1 class="text_color-1">ios-links</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 21: conclusion -->
+      <slyds>
+        
+        <slyd id="conclusion">
+          <div v-list>
+            <h1 class="text_color-1">conclusion</h1>
+            <h2>🙂</h2>
           </div>
         </slyd>
 
