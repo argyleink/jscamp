@@ -1,0 +1,7 @@
+{
+  "short_name": "App's Too Fast",
+  "name": "App's Too Fast",
+  "start_url": "index.html",
+  "background_color": "#111212",
+  "display": "fullscreen"
+}

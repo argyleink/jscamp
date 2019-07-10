@@ -1,0 +1,134 @@
+@import 'https://slyd.netlify.com/bundle.css';
+
+.slide-no {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2em;
+  height: 2em;
+  font-size: 2.5vmax;
+  border-radius: 50%;
+  color: hsl(calc(var(--hue) * 1.2) 50% 75%);
+  background: hsla(calc(var(--hue) * 1.2), 50%, 75%, 20%);
+  border: 1px solid var(--brand-color-3);
+}
+
+video {
+  &:focus:not(:focus-visible) { 
+    outline: none;
+  }
+
+  &[fit-height] {
+    height: 100%;
+  }
+}
+
+[side-by-side] {
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  gap: 5vmax;
+  padding: 0 5vmax;
+}
+
+[two-up-video-right] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 100vh;
+  gap: 3vmax;
+}
+
+[two-stack-video-bottom] {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr min-content;
+  gap: 3vmax;
+
+  & > :first-child {
+    padding-top: 3vmax;
+  }
+
+  & video {
+    width: 100%;
+  }
+}
+
+[three-up] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100vh;
+  gap: 1rem;
+}
+
+.icon {
+  fill: var(--text-color-2);
+  width: 3em;
+}
+
+[down-arrow] {
+  animation: float 2s ease-in-out infinite;
+  fill: var(--brand-color-3);
+  margin-bottom:  2.5vmax;
+  margin-left: 5em;
+}
+
+[arrow-left], [arrow-right] {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color-1);
+  
+  & > svg {
+    width: 1.5em;
+    animation: point 2s ease-in-out infinite;
+  }
+}
+
+[arrow-left] {
+  --rotate: 90deg;
+  margin-left: -1.75em;
+
+  & > svg {
+    margin-right: 1rem;
+  }
+}
+
+[arrow-right] {
+  --rotate: -90deg;
+  margin-right: -1.75em;
+
+  & > svg {
+    margin-left: 1rem;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes point {
+  0%, 100% {
+    transform: translateY(0) rotateZ(var(--rotate));
+  }
+  50% {
+    transform: translateX(.5rem) rotateZ(var(--rotate));
+  }
+}
+
+[no-depth] {
+  transform: none;
+}
+
+.video-header {
+  transform: none;
+  margin-bottom: 2rem;
+}
