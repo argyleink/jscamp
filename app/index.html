@@ -22,7 +22,8 @@
 
         <slyd id="beginning">
           <div v-list>
-            <h1>Prototyping</h1>
+            <h4 capitalize>high fidelity</h4>
+            <h1 uppercase>app prototypes</h1>
             <h3>surpassing the uncanny valley</h3>
           </div>
         </slyd>
@@ -68,12 +69,13 @@
 
       </slyds>
 
-      <!-- section 2: manifest -->
+      <!-- section 1: manifest -->
       <slyds>
         
         <slyd id="manifest">
+          <span class="slide-no">1</span>
           <div v-list>
-            <h1 class="text_color-1">manifest.json</h1>
+            <h1>manifest.json</h1>
             <h2>PWA entry point</h2>
           </div>
         </slyd>
@@ -176,12 +178,13 @@
 
       </slyds>
 
-      <!-- section 3: meta -->
+      <!-- section 2: meta -->
       <slyds>
         
         <slyd id="meta">
+          <span class="slide-no">2</span>
           <div v-list>
-            <h1 class="text_color-1">&#60;meta&#62;</h1>
+            <h1>&#60;meta&#62;</h1>
             <h2>Inform the render engine</h2>
           </div>
         </slyd>
@@ -241,14 +244,19 @@
 
       </slyds>
 
-      <!-- section 4: icons -->
+      <!-- section 3: icons -->
       <slyds>
         
         <slyd id="icons">
+          <span class="slide-no">3</span>
           <div v-list>
-            <h1 class="text_color-1">Icons</h1>
+            <h1>Icons</h1>
             <h2>1<sup>st</sup> Impressions</h2>
           </div>
+        </slyd>
+
+        <slyd id="icons-guidelines" style="background-color: #fafafa;">
+          <img fit-height src="./images/icon-keylines.png" alt="">
         </slyd>
 
         <slyd id="icons-demo">
@@ -264,19 +272,23 @@
               <li>Generator sites</li>
               <li>Build scripts</li>
               <li>Minimalism</li>
+              <li>Bespoke</li>
             </ul>
-            <p lead push-top="1">From my experience, long term you'll need to certain aspects by hand</p>
+            <p lead push-top="2" class="brand_color-3">
+              <b>Beware:</b> icons can quickly become debt
+            </p>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 5: splash -->
+      <!-- section 4: splash -->
       <slyds>
         
         <slyd id="splash">
+          <span class="slide-no">4</span>
           <div v-list>
-            <h1 class="text_color-1">Splash</h1>
+            <h1>Splash</h1>
             <h2>2<sup>nd</sup> Impressions</h2>
           </div>
         </slyd>
@@ -300,12 +312,13 @@
 
       </slyds>
 
-      <!-- section 6: prerender -->
+      <!-- section 5: prerender -->
       <slyds>
         
         <slyd id="prerender">
+          <span class="slide-no">5</span>
           <div v-list>
-            <h1 class="text_color-1">Prerender</h1>
+            <h1>Prerender</h1>
             <h2>SSR, compile, build, etc</h2>
           </div>
         </slyd>
@@ -314,8 +327,11 @@
           <div v-list>
             <h2 class="text_color-1">Why?</h2>
             <ul>
-              <li>Less work on browser</li>
+              <li>Limit requests</li>
               <li>Empower preload/prefetch/cache</li>
+              <li>Skip tombstones / skeletons</li>
+              <li>Spinnerless</li>
+              <li>On rails</li>
             </ul>
           </div>
         </slyd>
@@ -329,20 +345,77 @@
         <slyd id="prerender-results">
           <div v-list>
             <h2 class="text_color-1">Goal</h2>
-            <p lead>to create an experience that competes with native we have to cut corners and <span highlight>make tradeoffs</span> across the board</p>
-            <p>We're maintaining an illusion<br>not building for production</p>
+            <p>Maintaining an <span highlight>illusion</span>, <br>not building for production</p>
+            <p lead>JAMstack to SPA (or JAMSPA 😏) are valid <b>HTML experience creation</b> options</p>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 7: lazyload -->
+      <!-- section 6: bundle -->
       <slyds>
         
-        <slyd id="lazyload">
+        <slyd id="bundle">
+          <span class="slide-no">6</span>
           <div v-list>
-            <h1 class="text_color-1">lazyload</h1>
-            <h2>🙂</h2>
+            <h1>Bundle</h1>
+            <h2>Like prerendered dependencies</h2>
+          </div>
+        </slyd>
+
+        <slyd id="bundle-evaluate">
+          <div v-list>
+            <h2 class="text_color-1">Evaluate</h2>
+            <p lead>Depending on the complexity of your prototype, you may have 0 to very little Javascript</p>
+          </div>
+        </slyd>
+
+        <slyd id="bundle-prioritize">
+          <div v-list>
+            <h2 class="text_color-1">Prioritize</h2>
+          </div>
+        </slyd>
+
+        <slyd id="bundle-chunk">
+          <div v-list>
+            <h2 class="text_color-1">Chunk</h2>
+          </div>
+        </slyd>
+
+        <slyd id="bundle-differential-serving">
+          <div v-list>
+            <h2 class="text_color-1">Differential Serving</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 7: https -->
+      <slyds>
+        
+        <slyd id="https">
+          <span class="slide-no">7</span>
+          <div v-list>
+            <h1>HTTPS</h1>
+            <h2>Native gateway</h2>
+          </div>
+        </slyd>
+
+        <slyd id="html5">
+          <div v-list>
+            <h2 class="text_color-1">HTML5</h2>
+          </div>
+        </slyd>
+
+        <slyd id="pwa-required">
+          <div v-list>
+            <h2 class="text_color-1">PWA required</h2>
+          </div>
+        </slyd>
+
+        <slyd id="secure">
+          <div v-list>
+            <h2 class="text_color-1">Secure</h2>
           </div>
         </slyd>
 
@@ -352,152 +425,277 @@
       <slyds>
         
         <slyd id="preload">
+          <span class="slide-no">8</span>
           <div v-list>
-            <h1 class="text_color-1">preload</h1>
-            <h2>🙂</h2>
+            <h1>Preload</h1>
+            <h2>a declarative fetch directive</h2>
+          </div>
+        </slyd>
+
+        <slyd id="cache-asap">
+          <div v-list>
+            <h2 class="text_color-1">Cache ASAP</h2>
+            <h3>No execution</h3>
+            <!-- todo: snippet -->
+          </div>
+        </slyd>
+
+        <slyd id="preload-good-for">
+          <div v-list>
+            <ul>
+              <li>Above the fold</li>
+              <li>Critical CSS</li>
+              <li>Critical Scripts</li>
+              <li>Critical Fonts</li>
+            </ul>
+          </div>
+        </slyd>
+
+        <slyd id="preload-prefetch">
+          <div v-list>
+            <h2 class="text_color-1">Prefetch</h2>
+            <h3>Lowest priority items</h3>
+            <!-- todo: snippet -->
+          </div>
+        </slyd>
+
+        <slyd id="preload-dns-prefetch">
+          <div v-list>
+            <h2 class="text_color-1">DNS Prefetch</h2>
+            <h3>3rd party dependencies</h3>
+            <!-- todo: snippet -->
+          </div>
+        </slyd>
+
+        <slyd id="preload-media-queries">
+          <div v-list>
+            <h2 class="text_color-1">Media Query</h2>
+            <pre class="language-html line-numbers show-language" no-depth><code>
+              &#60;link rel="preload" as="style" href="portrait.css" media="(orientation: portrait)"&#62;
+              &#60;link rel="preload" as="script" href="effect.js" media="(min-width: 1200px)"&#62;
+            </code></pre>
+            <h3>conditional preload</h3>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 9: offline -->
-      <slyds>
-        
-        <slyd id="offline">
-          <div v-list>
-            <h1 class="text_color-1">offline</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 10: fonts -->
-      <slyds>
-        
-        <slyd id="fonts">
-          <div v-list>
-            <h1 class="text_color-1">system fonts</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 11: css -->
-      <slyds>
-        
-        <slyd id="css">
-          <div v-list>
-            <h1 class="text_color-1">CSS</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 12: https -->
-      <slyds>
-        
-        <slyd id="https">
-          <div v-list>
-            <h1 class="text_color-1">HTTPS</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 13: bundle -->
-      <slyds>
-        
-        <slyd id="bundle">
-          <div v-list>
-            <h1 class="text_color-1">bundle</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 14: defer -->
+      <!-- section 9: defer -->
       <slyds>
         
         <slyd id="defer">
+          <span class="slide-no">9</span>
           <div v-list>
-            <h1 class="text_color-1">defer</h1>
-            <h2>🙂</h2>
+            <h1 capitalize>Defer</h1>
+            <h2><b>no</b> render blocking here</h2>
+          </div>
+        </slyd>
+
+        <slyd id="defer-bundles">
+          <div v-list>
+            <h2 class="text_color-1">Bundle loading</h2>
+            <pre class="language-html line-numbers show-language" no-depth><code>
+              &#60;script defer src="..." type="module"&#62;&#60;/script&#62;
+              &#60;script async src="..." type="module"&#62;&#60;/script&#62;
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="defer-vs-async">
+          <div v-list>
+            <h2 class="text_color-1" uppercase>defer</h2>
+            <p lead>Load async & execute in the order recieved</p>
+          </div>
+        </slyd>
+
+        <slyd id="defer-async">
+          <div v-list>
+            <h2 class="text_color-1" uppercase>async</h2>
+            <p lead>Load async & execute immediately</p>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 15: paintlock -->
-      <slyds>
-        
-        <slyd id="paintlock">
-          <div v-list>
-            <h1 class="text_color-1">paintlock</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 16: retina -->
-      <slyds>
-        
-        <slyd id="retina">
-          <div v-list>
-            <h1 class="text_color-1">retina images</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds>
-
-      <!-- section 17: service worker -->
+      <!-- section 10: service worker -->
       <slyds>
         
         <slyd id="service-worker">
+          <span class="slide-no">10</span>
           <div v-list>
-            <h1 class="text_color-1">service worker</h1>
-            <h2>🙂</h2>
+            <h1 capitalize>service worker</h1>
+            <h2>cache money</h2>
+          </div>
+        </slyd>
+
+        <slyd id="preload-dns-prefetch">
+          <div v-list>
+            <h2 class="text_color-1">DNS Prefetch</h2>
+            <h3>3rd party dependencies</h3>
+            <!-- todo: snippet -->
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 18: offline-ux -->
+      <!-- section 11: lazyload -->
       <slyds>
         
-        <slyd id="offline-ux">
+        <slyd id="lazyload">
+          <span class="slide-no">11</span>
           <div v-list>
-            <h1 class="text_color-1">offline ux</h1>
+            <h1>Lazy Load</h1>
+            <h2>Optimize for first paint</h2>
+          </div>
+        </slyd>
+
+        <slyd id="lazyload-categories">
+          <div v-list>
+            <ul>
+              <li>Time</li>
+              <li>Event</li>
+              <li>Hint</li>
+            </ul>
+          </div>
+        </slyd>
+
+        <slyd id="lazyload-uncriticals">
+          <div v-list>
+            <h2 class="text_color-1">uncriticals</h2>
+          </div>
+        </slyd>
+
+        <slyd id="lazyload-css">
+          <div v-list>
+            <h2 class="text_color-1">lazy load css</h2>
+          </div>
+        </slyd>
+
+        <slyd id="lazyload-js">
+          <div v-list>
+            <h2 class="text_color-1">lazy load js</h2>
+          </div>
+        </slyd>
+
+        <slyd id="lazyload-media">
+          <div v-list>
+            <h2 class="text_color-1">lazy load media</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 12: prefetch -->
+      <slyds>
+        
+        <slyd id="prefetch">
+          <span class="slide-no">12</span>
+          <div v-list>
+            <h1>prefetch</h1>
             <h2>🙂</h2>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 19: pull-to-refresh -->
+      <!-- section 13: paintlock -->
+      <slyds>
+        
+        <slyd id="paintlock">
+          <span class="slide-no">13</span>
+          <div v-list>
+            <h1>paintlock</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 14: offline -->
+      <slyds>
+        
+        <slyd id="offline">
+          <span class="slide-no">14</span>
+          <div v-list>
+            <h1>offline</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 15: fonts -->
+      <slyds>
+        
+        <slyd id="fonts">
+          <span class="slide-no">15</span>
+          <div v-list>
+            <h1>system fonts</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 16: css -->
+      <slyds>
+        
+        <slyd id="css">
+          <span class="slide-no">16</span>
+          <div v-list>
+            <h1>CSS</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 17: retina -->
+      <slyds>
+        
+        <slyd id="retina">
+          <span class="slide-no">17</span>
+          <div v-list>
+            <h1>retina images</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 18: pull-to-refresh -->
       <slyds>
         
         <slyd id="pull-to-refresh">
+          <span class="slide-no">18</span>
           <div v-list>
-            <h1 class="text_color-1">pull-to-refresh</h1>
+            <h1>pull-to-refresh</h1>
             <h2>🙂</h2>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 20: ios-links -->
+      <!-- section 19: ios-links -->
       <slyds>
         
         <slyd id="ios-links">
+          <span class="slide-no">19</span>
           <div v-list>
-            <h1 class="text_color-1">ios-links</h1>
+            <h1>ios-links</h1>
+            <h2>🙂</h2>
+          </div>
+        </slyd>
+
+      </slyds>
+
+      <!-- section 20: offline-ux -->
+      <slyds>
+        
+        <slyd id="offline-ux">
+          <span class="slide-no">20</span>
+          <div v-list>
+            <h1>offline ux</h1>
             <h2>🙂</h2>
           </div>
         </slyd>
@@ -509,7 +707,7 @@
         
         <slyd id="conclusion">
           <div v-list>
-            <h1 class="text_color-1">conclusion</h1>
+            <h1>conclusion</h1>
             <h2>🙂</h2>
           </div>
         </slyd>

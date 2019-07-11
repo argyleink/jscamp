@@ -1,5 +1,40 @@
 @import 'https://slyd.netlify.com/bundle.css';
 
+h1, h2, h3, h4, h5, h6, ol, ul, p {
+  --fluid-type-min-screen: 20;
+  --fluid-type-max-screen: 70;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  --fluid-type-min-screen: 30;
+  --fluid-type-max-screen: 70;
+}
+
+slyd {
+  background-image: 
+    radial-gradient(circle, hsla(0,0%,0%,var(--darkness)) 0%, hsla(0,0%,0%,var(--darkness)) 100%),
+    var(--image);
+
+  &[pull-left] {
+    justify-items: flex-start;
+  }
+}
+
+.slide-no {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2em;
+  height: 2em;
+  font-size: 2.5vmax;
+  border-radius: 50%;
+  color: hsl(calc(var(--hue) * 1.2) 50% 75%);
+  background: hsla(calc(var(--hue) * 1.2), 50%, 75%, 20%);
+  border: 1px solid var(--brand-color-3);
+}
+
 video {
   &:focus:not(:focus-visible) { 
     outline: none;
@@ -107,6 +142,10 @@ video {
   50% {
     transform: translateX(.5rem) rotateZ(var(--rotate));
   }
+}
+
+[fit-height] {
+  height: 100%;
 }
 
 [no-depth] {
