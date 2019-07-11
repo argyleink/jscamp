@@ -24,7 +24,7 @@
         <slyd id="beginning">
           <div v-list>
             <h4 capitalize>high fidelity</h4>
-            <h1 uppercase>prototypes</h1>
+            <h1 uppercase bold>prototypes</h1>
             <h3 capitalize class="brand_color-1">surpassing the uncanny valley</h3>
           </div>
         </slyd>
@@ -76,7 +76,7 @@
         <slyd id="manifest">
           <span class="slide-no">1</span>
           <div v-list>
-            <h1>manifest.json</h1>
+            <h1 bold>Manifest</h1>
             <h2>PWA entry point</h2>
           </div>
         </slyd>
@@ -95,8 +95,8 @@
             <h3 push-bottom="2" class="text_color-1">App Name</h3>
             <pre class="language-json line-numbers show-language"><code>
               {
-                "name": "Safe",
-                "short_name": "Safe",
+                "name": "YOUR_APP",
+                "short_name": "YOUR_APP",
               }
             </code></pre>
             <p lead push-top="2">Used on device homescreen</p>
@@ -132,7 +132,6 @@
                 ]
               }
             </code></pre>
-            <p lead push-top="2">Used on device homescreen</p>
           </div>
         </slyd>
 
@@ -147,7 +146,6 @@
                 "scope": "/",
               }
             </code></pre>
-            <p lead push-top="2">Customize for your UX</p>
           </div>
         </slyd>
 
@@ -186,14 +184,14 @@
         <slyd id="meta">
           <span class="slide-no">2</span>
           <div v-list>
-            <h1>&#60;meta&#62;</h1>
+            <h1 bold>&#60;meta&#62;</h1>
             <h2>Inform the render engine</h2>
           </div>
         </slyd>
 
         <slyd id="meta-viewport">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">Viewport</h3>
+            <h3 push-bottom="2" class="text_color-1">Viewport</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;meta name="viewport" content="initial-scale=1" /&#62;
             </code></pre>
@@ -206,9 +204,10 @@
 
         <slyd id="meta-web-app">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">iOS Web App</h3>
+            <h3 push-bottom="2" class="text_color-1">iOS Web App</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;meta name="mobile-web-app-capable" content="yes" /&#62;
+              &#60;meta name="application-name" content="YOUR_APP" /&#62;
             </code></pre>
             <ul push-top="2">
               <li>Legacy?</li>
@@ -220,7 +219,7 @@
 
         <slyd id="meta-theme">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">App Theme</h3>
+            <h3 push-bottom="2" class="text_color-1">App Theme</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;meta name="apple-mobile-web-app-status-bar-style" content="default" /&#62;
               &#60;meta name="theme-color" content="#ffffff" /&#62;
@@ -232,13 +231,12 @@
 
         <slyd id="meta-brand">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">App Brand</h3>
+            <h3 push-bottom="2" class="text_color-1">App Brand</h3>
             <pre class="language-html line-numbers show-language"><code>
-              &#60;link rel="apple-touch-icon" href="/assets/icon.png" /&#62;
-              &#60;link rel="apple-touch-startup-image" href="/assets/icons/startup.png" /&#62;
-              &#60;link rel="icon" sizes="192x192" href="/assets/icon.png" /&#62;
-              &#60;meta name="application-name" content="Safe" /&#62;
-              &#60;meta name="msapplication-TileImage" content="/assets/icons/ms-touch-icon.png" /&#62;
+              &#60;link rel="icon" sizes="192x192" href="/icons/192.png" /&#62;
+              &#60;link rel="apple-touch-icon" href="/icons/apple-icon.png" /&#62;
+              &#60;link rel="apple-touch-startup-image" href="/icons/icons/apple-splash.png" /&#62;
+              &#60;meta name="msapplication-TileImage" content="/icons/ms-icon.png" /&#62;
             </code></pre>
             <p lead push-top="2">OS icons & launch assets</p>
           </div>
@@ -252,7 +250,7 @@
         <slyd id="icons">
           <span class="slide-no">3</span>
           <div v-list>
-            <h1>Icons</h1>
+            <h1 bold>Icons</h1>
             <h2>1<sup>st</sup> Impressions</h2>
           </div>
         </slyd>
@@ -290,7 +288,7 @@
         <slyd id="splash">
           <span class="slide-no">4</span>
           <div v-list>
-            <h1>Splash</h1>
+            <h1 bold>Splash</h1>
             <h2>2<sup>nd</sup> Impressions</h2>
           </div>
         </slyd>
@@ -320,7 +318,7 @@
         <slyd id="prerender">
           <span class="slide-no">5</span>
           <div v-list>
-            <h1>Prerender</h1>
+            <h1 bold>Prerender</h1>
             <h2>SSR, compile, build, etc</h2>
           </div>
         </slyd>
@@ -347,7 +345,7 @@
         <slyd id="prerender-results">
           <div v-list>
             <h2 class="text_color-1">Goal</h2>
-            <p>Maintaining an <span highlight>illusion</span>, <br>not building for production</p>
+            <p>Maintain an <span highlight>illusion</span>, <br>not building for production</p>
             <p lead>JAMstack to SPA (or JAMSPA 😏) are valid <b>HTML experience creation</b> options</p>
           </div>
         </slyd>
@@ -360,7 +358,7 @@
         <slyd id="bundle">
           <span class="slide-no">6</span>
           <div v-list>
-            <h1>Bundle</h1>
+            <h1 bold>Bundle</h1>
             <h2>Like prerendered dependencies</h2>
           </div>
         </slyd>
@@ -375,18 +373,27 @@
         <slyd id="bundle-prioritize">
           <div v-list>
             <h2 class="text_color-1">Prioritize</h2>
+            <ul>
+              <li>Critical vs Non-critical</li>
+              <li>This before that</li>
+            </ul>
           </div>
         </slyd>
 
         <slyd id="bundle-chunk">
           <div v-list>
             <h2 class="text_color-1">Chunk</h2>
+            <p lead>Evaluation and prioritization are heavy informers on what bundle chunk opportunities exist</p>
           </div>
         </slyd>
 
         <slyd id="bundle-differential-serving">
           <div v-list>
             <h2 class="text_color-1">Differential Serving</h2>
+            <ul>
+              <li>JS</li>
+              <li>CSS</li>
+            </ul>
           </div>
         </slyd>
 
@@ -398,7 +405,7 @@
         <slyd id="https">
           <span class="slide-no">7</span>
           <div v-list>
-            <h1>HTTPS</h1>
+            <h1 bold>HTTPS</h1>
             <h2>Native gateway</h2>
           </div>
         </slyd>
@@ -411,19 +418,22 @@
               <li>Geolocation</li>
               <li>Motion sensors</li>
               <li>Camera access</li>
+              <li class="text_color-2">and more...</li>
             </ul>
           </div>
         </slyd>
 
         <slyd id="pwa-required">
           <div v-list>
-            <h2 class="text_color-1">PWA required</h2>
+            <h2 class="text_color-1">PWA requirement</h2>
+            <p lead>Not just a blocker to features, it's a requirement for promotion</p>
           </div>
         </slyd>
 
         <slyd id="secure">
           <div v-list>
             <h2 class="text_color-1">Secure</h2>
+            <p lead>You should want this</p>
           </div>
         </slyd>
 
@@ -435,7 +445,7 @@
         <slyd id="preload">
           <span class="slide-no">8</span>
           <div v-list>
-            <h1>Preload</h1>
+            <h1 bold>Preload</h1>
             <h2>a declarative fetch directive</h2>
           </div>
         </slyd>
@@ -494,7 +504,7 @@
         <slyd id="defer">
           <span class="slide-no">9</span>
           <div v-list>
-            <h1 capitalize>Defer</h1>
+            <h1 capitalize bold>Defer</h1>
             <h2><b>no</b> render blocking here</h2>
           </div>
         </slyd>
@@ -511,15 +521,15 @@
 
         <slyd id="defer-vs-async">
           <div v-list>
-            <h2 class="text_color-1" uppercase>defer</h2>
-            <p lead>Load async & execute in the order recieved</p>
+            <h3 bold class="text_color-1" uppercase>defer</h3>
+            <p lead>Load async &<br><span highlight>execute in the order recieved</span></p>
           </div>
         </slyd>
 
         <slyd id="defer-async">
           <div v-list>
-            <h2 class="text_color-1" uppercase>async</h2>
-            <p lead>Load async & execute immediately</p>
+            <h3 bold class="text_color-1" uppercase>async</h3>
+            <p lead>Load async &<br><span highlight>execute immediately</span></p>
           </div>
         </slyd>
 
@@ -531,28 +541,28 @@
         <slyd id="service-worker">
           <span class="slide-no">10</span>
           <div v-list>
-            <h1 capitalize>service worker</h1>
+            <h1 capitalize bold>service worker</h1>
             <h2>cache money</h2>
           </div>
         </slyd>
 
         <slyd id="service-worker-static">
           <div v-list>
-            <h2 class="text_color-1">static files</h2>
+            <h2 class="text_color-1" capitalize>static files</h2>
             <h3>cache em</h3>
           </div>
         </slyd>
 
         <slyd id="service-worker-dynamic">
           <div v-list>
-            <h2 class="text_color-1">dynamic files</h2>
+            <h2 class="text_color-1" capitalize>dynamic files</h2>
             <h3>try not to</h3>
           </div>
         </slyd>
 
         <slyd id="service-worker-push">
           <div v-list>
-            <h2 class="text_color-1">push notifications</h2>
+            <h2 class="text_color-1" capitalize>push notifications</h2>
             <h3>adds a nice touch</h3>
           </div>
         </slyd>
@@ -565,7 +575,7 @@
         <slyd id="lazyload">
           <span class="slide-no">11</span>
           <div v-list>
-            <h1>Lazy Load</h1>
+            <h1 bold>Lazy Load</h1>
             <h2>Optimize for first paint</h2>
           </div>
         </slyd>
@@ -612,7 +622,7 @@
         <slyd id="paintholding">
           <span class="slide-no">12</span>
           <div v-list>
-            <h1>Paint Holding</h1>
+            <h1 bold>Paint Holding</h1>
             <h2>Chromium freeby</h2>
           </div>
         </slyd>
@@ -637,7 +647,7 @@
         <slyd id="fonts">
           <span class="slide-no">13</span>
           <div v-list>
-            <h1>Fonts</h1>
+            <h1 bold>Fonts</h1>
             <h2>tips n tricks</h2>
           </div>
         </slyd>
@@ -683,7 +693,7 @@
         <slyd id="css">
           <span class="slide-no">14</span>
           <div v-list>
-            <h1>CSS</h1>
+            <h1 bold>CSS</h1>
             <h2>illusion polish</h2>
           </div>
         </slyd>
@@ -800,7 +810,7 @@
         <slyd id="retina">
           <span class="slide-no">15</span>
           <div v-list>
-            <h1>Retina</h1>
+            <h1 bold>Retina</h1>
             <h2>Leverage that DPI</h2>
           </div>
         </slyd>
@@ -838,7 +848,7 @@
         <slyd id="pull-to-refresh">
           <span class="slide-no">16</span>
           <div v-list>
-            <h1>Pull 2 Refresh</h1>
+            <h1 bold>Pull 2 Refresh</h1>
             <h2>You may or may not want this</h2>
           </div>
         </slyd>
@@ -863,7 +873,7 @@
         <slyd id="ios-links">
           <span class="slide-no">17</span>
           <div v-list>
-            <h1>iOS Links</h1>
+            <h1 bold>iOS Links</h1>
             <h2>taking matters into our own hands</h2>
           </div>
         </slyd>
@@ -895,7 +905,7 @@
         <slyd id="offline-ux">
           <span class="slide-no">18</span>
           <div v-list>
-            <h1>Offline UX</h1>
+            <h1 bold>Offline UX</h1>
             <h2>show your work</h2>
           </div>
         </slyd>
@@ -945,7 +955,7 @@
         <slyd id="recap">
           <div v-list>
             <small>that was..</small>
-            <h1>18 steps</h1>
+            <h1 bold>18 steps</h1>
             <h2>to a seamless PWototype</h2>
           </div>
         </slyd>
