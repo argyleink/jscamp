@@ -604,24 +604,11 @@
 
       </slyds>
 
-      <!-- section 12: prefetch -->
-      <!-- <slyds>
-        
-        <slyd id="prefetch">
-          <span class="slide-no">12</span>
-          <div v-list>
-            <h1>prefetch</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds> -->
-
-      <!-- section 13: paintholding -->
+      <!-- section 12: paintholding -->
       <slyds>
         
         <slyd id="paintholding">
-          <span class="slide-no">13</span>
+          <span class="slide-no">12</span>
           <div v-list>
             <h1>Paint Holding</h1>
             <h2>Chromium freeby</h2>
@@ -642,24 +629,11 @@
 
       </slyds>
 
-      <!-- section 14: offline -->
-      <!-- <slyds>
-        
-        <slyd id="offline">
-          <span class="slide-no">14</span>
-          <div v-list>
-            <h1>Offline</h1>
-            <h2>🙂</h2>
-          </div>
-        </slyd>
-
-      </slyds> -->
-
-      <!-- section 15: fonts -->
+      <!-- section 13: fonts -->
       <slyds>
         
         <slyd id="fonts">
-          <span class="slide-no">15</span>
+          <span class="slide-no">13</span>
           <div v-list>
             <h1>Fonts</h1>
             <h2>tips n tricks</h2>
@@ -701,11 +675,11 @@
 
       </slyds>
 
-      <!-- section 16: css -->
+      <!-- section 14: css -->
       <slyds>
         
         <slyd id="css">
-          <span class="slide-no">16</span>
+          <span class="slide-no">14</span>
           <div v-list>
             <h1>CSS</h1>
             <h2>illusion polish</h2>
@@ -784,11 +758,11 @@
 
       </slyds>
 
-      <!-- section 17: retina -->
+      <!-- section 15: retina -->
       <slyds>
         
         <slyd id="retina">
-          <span class="slide-no">17</span>
+          <span class="slide-no">15</span>
           <div v-list>
             <h1>Retina</h1>
             <h2>Leverage that DPI</h2>
@@ -822,11 +796,11 @@
 
       </slyds>
 
-      <!-- section 18: pull-to-refresh -->
+      <!-- section 16: pull-to-refresh -->
       <slyds>
         
         <slyd id="pull-to-refresh">
-          <span class="slide-no">18</span>
+          <span class="slide-no">16</span>
           <div v-list>
             <h1>Pull 2 Refresh</h1>
             <h2>You may or may not want this</h2>
@@ -847,11 +821,11 @@
 
       </slyds>
 
-      <!-- section 19: ios-links -->
+      <!-- section 17: ios-links -->
       <slyds>
         
         <slyd id="ios-links">
-          <span class="slide-no">19</span>
+          <span class="slide-no">17</span>
           <div v-list>
             <h1>iOS Links</h1>
             <h2>taking matters into our own hands</h2>
@@ -879,26 +853,103 @@
 
       </slyds>
 
-      <!-- section 20: offline-ux -->
+      <!-- section 18: offline-ux -->
       <slyds>
         
         <slyd id="offline-ux">
-          <span class="slide-no">20</span>
+          <span class="slide-no">18</span>
           <div v-list>
-            <h1>offline ux</h1>
-            <h2>🙂</h2>
+            <h1>Offline UX</h1>
+            <h2>show your work</h2>
+          </div>
+        </slyd>
+
+        <slyd id="offline-ux-navigator">
+          <iframe background-video loading="lazy" src="https://www.youtube.com/embed/gVebPEYiq2o?controls=0&autoplay=1&loop=1&rel=0" frameborder="0" allow="loop; autoplay; encrypted-media;"></iframe>
+          <div class="backdrop"></div>
+          <div v-list>
+            <pre class="language-js line-numbers show-language"><code>
+              const { isOnline } = navigator
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="offline-ux-events">
+          <div v-list>
+            <h2 class="text_color-1" push-bottom="1">Listen</h2>
+            <pre class="language-js line-numbers show-language"><code>
+              window.addEventListener('online', e => 
+                console.info('online'))
+
+              window.addEventListener('offline', e => 
+                console.info('offline'))
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="ofline-ux-lie-fi">
+          <div v-list>
+            <h2 class="text_color-1">Lie-Fi</h2>
+            <h3>beware</h3>
+          </div>
+        </slyd>
+
+        <slyd id="ofline-ux-is-polish">
+          <div v-list>
+            <h2 class="text_color-1">UI</h2>
+            <h3>nice polish</h3>
           </div>
         </slyd>
 
       </slyds>
 
-      <!-- section 21: conclusion -->
+      <!-- section: conclusion -->
       <slyds>
         
-        <slyd id="conclusion">
+        <slyd id="recap">
           <div v-list>
-            <h1>conclusion</h1>
-            <h2>🙂</h2>
+            <small>that was..</small>
+            <h1>18 steps</h1>
+            <h2>to a seamless PWototype</h2>
+          </div>
+        </slyd>
+
+        <slyd id="end-tldr" side-by-side>
+          <ul style="margin:0;">
+            <li>manifest.json</li>
+            <li>&#60;meta&#62;</li>
+            <li>icons</li>
+            <li>splash</li>
+            <li>prerender</li>
+            <li>bundle</li>
+            <li>HTTPS</li>
+            <li>preload</li>
+            <li>defer</li>
+          </ul>
+          <ul style="margin:0;">
+            <li>service workers</li>
+            <li>lazy load</li>
+            <li>paint holding</li>
+            <li>fonts</li>
+            <li>css</li>
+            <li>retina</li>
+            <li>pull to refresh</li>
+            <li>iOS links</li>
+            <li>offline ux</li>
+          </ul>
+        </slyd>
+
+        <slyd id="healthy-tasks">
+          <div v-list>
+            <h2 class="text_color-1">Healthy Apps</h2>
+            <p lead>these implementation details are good for any project</p>
+          </div>
+        </slyd>
+
+        <slyd id="end">
+          <div v-list>
+            <h1>Thank You</h1>
+            <h1><span rock-hand>🤘</span>💀<span rock-hand>🤘</span></h1>
           </div>
         </slyd>
 
