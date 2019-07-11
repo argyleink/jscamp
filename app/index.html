@@ -6,6 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
     <meta name="theme-color" content="#111212">
     <meta name="description" content="">
     <link rel="manifest" href="manifest.json">
@@ -23,8 +24,8 @@
         <slyd id="beginning">
           <div v-list>
             <h4 capitalize>high fidelity</h4>
-            <h1 uppercase>app prototypes</h1>
-            <h3>surpassing the uncanny valley</h3>
+            <h1 uppercase>prototypes</h1>
+            <h3 capitalize class="brand_color-1">surpassing the uncanny valley</h3>
           </div>
         </slyd>
 
@@ -32,10 +33,10 @@
           <div v-list>
             <h2 class="text_color-1">Target UX</h2>
             <ol>
-              <li>Mobile or desktop ready</li>
-              <li>Launch from coveted system drawers</li>
+              <li>Mobile or desktop app</li>
+              <li>Launch from coveted system drawer</li>
               <li>Load instant & full screen</li>
-              <li>Demonstrate flow</li>
+              <li>Seamless demo flow</li>
             </ol>
           </div>
         </slyd>
@@ -82,7 +83,7 @@
 
         <slyd id="manifest-entry">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">Load It</h3>
+            <h3 push-bottom="2" class="text_color-1">Load It</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;link rel="manifest" href="/manifest.json"&#62;
             </code></pre>
@@ -91,7 +92,7 @@
 
         <slyd id="manifest-name">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">App Name</h3>
+            <h3 push-bottom="2" class="text_color-1">App Name</h3>
             <pre class="language-json line-numbers show-language"><code>
               {
                 "name": "Safe",
@@ -104,7 +105,7 @@
 
         <slyd id="manifest-theme">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">App Theme</h3>
+            <h3 push-bottom="2" class="text_color-1">App Theme</h3>
             <pre class="language-json line-numbers show-language"><code>
               {
                 "theme_color": "#ffffff",
@@ -117,7 +118,7 @@
 
         <slyd id="manifest-brand">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">App Icons</h3>
+            <h3 push-bottom="2" class="text_color-1">App Icons</h3>
             <pre class="language-json line-numbers show-language"><code>
               {
                 "icons": [
@@ -137,12 +138,13 @@
 
         <slyd id="manifest-extras">
           <div v-list>
-            <h3 push-bottom="2" class="brand_color-1">PWA Extras</h3>
+            <h3 push-bottom="2" class="text_color-1">PWA Extras</h3>
             <pre class="language-json line-numbers show-language"><code>
               {
                 "display": "standalone",
                 "orientation": "portrait",
                 "start_url": "/index.html",
+                "scope": "/",
               }
             </code></pre>
             <p lead push-top="2">Customize for your UX</p>
@@ -151,7 +153,7 @@
 
         <slyd id="manifest-devtools" two-up-video-right>
           <div v-list>
-            <h2 class="brand_color-1">Verify</h2>
+            <h2 class="text_color-1">Verify</h2>
             <p lead text-left>Chrome Devtools can verify your work before you install on a device</p>
           </div>
           <img fit-height src="#" loading="lazy"/>
@@ -752,6 +754,40 @@
                   ...
                 &#60;/body&#62;
               &#60;/html&#62;
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-sticky">
+          <div v-list>
+            <h2 class="text_color-1">Sticky</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              header {
+                position: sticky;
+                top: 0;
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-snap-points">
+          <div v-list>
+            <h2 class="text_color-1">Snap Points</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              .filmstrip {
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: 20rem;
+                grid-template-rows: 50vh;
+
+                overflow-x: scroll;
+                overscroll-behavior-x: contain;
+                scroll-snap-type: x mandatory;
+
+                & > * {
+                  scroll-snap-align: center;
+                }
+              }
             </code></pre>
           </div>
         </slyd>

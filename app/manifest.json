@@ -3,5 +3,12 @@
   "name": "App's Too Fast",
   "start_url": "index.html",
   "background_color": "#111212",
-  "display": "fullscreen"
+  "display": "fullscreen",
+  "icons":[
+    {
+      "src":"/images/android-chrome-512x512.png",
+      "sizes":"512x512",
+      "type":"image/png"
+    }
+  ]
 }
