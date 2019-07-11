@@ -404,6 +404,12 @@
         <slyd id="html5">
           <div v-list>
             <h2 class="text_color-1">HTML5</h2>
+            <ul>
+              <li>Web share</li>
+              <li>Geolocation</li>
+              <li>Motion sensors</li>
+              <li>Camera access</li>
+            </ul>
           </div>
         </slyd>
 
@@ -528,10 +534,24 @@
           </div>
         </slyd>
 
-        <slyd id="service-worker-">
+        <slyd id="service-worker-static">
           <div v-list>
-            <h2 class="text_color-1"></h2>
-            <h3></h3>
+            <h2 class="text_color-1">static files</h2>
+            <h3>cache em</h3>
+          </div>
+        </slyd>
+
+        <slyd id="service-worker-dynamic">
+          <div v-list>
+            <h2 class="text_color-1">dynamic files</h2>
+            <h3>try not to</h3>
+          </div>
+        </slyd>
+
+        <slyd id="service-worker-push">
+          <div v-list>
+            <h2 class="text_color-1">push notifications</h2>
+            <h3>adds a nice touch</h3>
           </div>
         </slyd>
 
@@ -585,7 +605,7 @@
       </slyds>
 
       <!-- section 12: prefetch -->
-      <slyds>
+      <!-- <slyds>
         
         <slyd id="prefetch">
           <span class="slide-no">12</span>
@@ -595,33 +615,45 @@
           </div>
         </slyd>
 
-      </slyds>
+      </slyds> -->
 
-      <!-- section 13: paintlock -->
+      <!-- section 13: paintholding -->
       <slyds>
         
-        <slyd id="paintlock">
+        <slyd id="paintholding">
           <span class="slide-no">13</span>
           <div v-list>
-            <h1>paintlock</h1>
-            <h2>🙂</h2>
+            <h1>Paint Holding</h1>
+            <h2>Chromium freeby</h2>
+          </div>
+        </slyd>
+
+        <slyd id="paintholding-demo">
+          <div v-list>
+            <h2 class="text_color-1">demo</h2>
+          </div>
+        </slyd>
+
+        <slyd id="paintholding-nice">
+          <div v-list>
+            <h2 class="text_color-1">nice to have</h2>
           </div>
         </slyd>
 
       </slyds>
 
       <!-- section 14: offline -->
-      <slyds>
+      <!-- <slyds>
         
         <slyd id="offline">
           <span class="slide-no">14</span>
           <div v-list>
-            <h1>offline</h1>
+            <h1>Offline</h1>
             <h2>🙂</h2>
           </div>
         </slyd>
 
-      </slyds>
+      </slyds> -->
 
       <!-- section 15: fonts -->
       <slyds>
@@ -629,8 +661,41 @@
         <slyd id="fonts">
           <span class="slide-no">15</span>
           <div v-list>
-            <h1>system fonts</h1>
-            <h2>🙂</h2>
+            <h1>Fonts</h1>
+            <h2>tips n tricks</h2>
+          </div>
+        </slyd>
+
+        <slyd id="system-fonts">
+          <div v-list>
+            <h2 class="text_color-1">System Fonts</h2>
+            <!-- <h3>As much as possible</h3> -->
+            <pre class="language-css line-numbers show-language"><code>
+              body {
+                font-family: system-ui, 
+                  -apple-system, Segoe UI, 
+                  Roboto, Ubuntu, Cantarell, 
+                  Noto Sans, sans-serif, 
+                  Segoe UI, Roboto, Ubuntu, 
+                  Cantarell, Noto Sans, 
+                  sans-serif
+                ;
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="fonts-custom">
+          <div v-list>
+            <h2 class="text_color-1">Custom Fonts</h2>
+            <h3>preload</h3>
+          </div>
+        </slyd>
+
+        <slyd id="fonts-lazy">
+          <div v-list>
+            <h2 class="text_color-1">Lazy Load</h2>
+            <h3>Non critical glyphs or whole families</h3>
           </div>
         </slyd>
 
@@ -643,7 +708,77 @@
           <span class="slide-no">16</span>
           <div v-list>
             <h1>CSS</h1>
-            <h2>🙂</h2>
+            <h2>illusion polish</h2>
+          </div>
+        </slyd>
+
+        <slyd id="css-standalone">
+          <div v-list>
+            <h2 class="text_color-1">Detection</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              @media all and (display-mode: standalone) {
+                ...
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-scrollview">
+          <div v-list>
+            <h2 class="text_color-1">Scrollviews</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              .scrollview {
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-text-selection">
+          <div v-list>
+            <h2 class="text_color-1">Text Selection</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              body {
+                -webkit-user-select: none;
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-tap-highlight">
+          <div v-list>
+            <h2 class="text_color-1">Tap Highlight</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              body {
+                -webkit-tap-highlight-color: transparent;
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-callouts">
+          <div v-list>
+            <h2 class="text_color-1">Callouts</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              body {
+                -webkit-touch-callout: none;
+              }
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="css-active-n-hover">
+          <div v-list>
+            <h2 class="text_color-1" push-bottom="1">Hover & Active</h2>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;html&#62;
+                &#60;head&#62;...&#60;/head&#62;
+                &#60;body ontouchstart&#62;
+                  ...
+                &#60;/body&#62;
+              &#60;/html&#62;
+            </code></pre>
           </div>
         </slyd>
 
@@ -655,8 +790,33 @@
         <slyd id="retina">
           <span class="slide-no">17</span>
           <div v-list>
-            <h1>retina images</h1>
-            <h2>🙂</h2>
+            <h1>Retina</h1>
+            <h2>Leverage that DPI</h2>
+          </div>
+        </slyd>
+
+        <slyd id="retina-prepare">
+          <div v-list>
+            <h2 class="text_color-1">Prepare</h2>
+            <h3>Optimize, crunch, process</h3>
+          </div>
+        </slyd>
+
+        <slyd id="retina-picture">
+          <div v-list>
+            <h2 class="text_color-1">&#60;picture&#62;</h2>
+            <h3>let browser pick</h3>
+          </div>
+        </slyd>
+
+        <slyd id="retina-gotcha">
+          <div v-list>
+            <h2 class="text_color-1">Gotchas</h2>
+            <ul>
+              <li>Debt</li>
+              <li>Heavy</li>
+              <li>Performance</li>
+            </ul>
           </div>
         </slyd>
 
@@ -668,8 +828,20 @@
         <slyd id="pull-to-refresh">
           <span class="slide-no">18</span>
           <div v-list>
-            <h1>pull-to-refresh</h1>
-            <h2>🙂</h2>
+            <h1>Pull 2 Refresh</h1>
+            <h2>You may or may not want this</h2>
+          </div>
+        </slyd>
+
+        <slyd id="p2r-prevention">
+          <div v-list>
+            <h2 class="text_color-1">Chromium</h2>
+            <pre class="language-css line-numbers show-language"><code>
+              .scrollview { 
+                overscroll-behavior-y: contain;
+              }
+            </code></pre>
+            <p lead>Keep the glow and prevent the navigational features</p>
           </div>
         </slyd>
 
@@ -681,8 +853,27 @@
         <slyd id="ios-links">
           <span class="slide-no">19</span>
           <div v-list>
-            <h1>ios-links</h1>
-            <h2>🙂</h2>
+            <h1>iOS Links</h1>
+            <h2>taking matters into our own hands</h2>
+          </div>
+        </slyd>
+
+        <slyd id="ios-links-new-window">
+          <div v-list>
+            <h2 class="text_color-1">A new window? Really?</h2>
+            <h3>really really.</h3>
+          </div>
+        </slyd>
+
+        <slyd id="ios-links-snippet">
+          <div v-list>
+            <h2 class="text_color-1" push-bottom="1">Stay in app</h2>
+            <pre class="language-js line-numbers show-language"><code>
+              event.preventDefault()
+              const { href } = link_element
+              location.assign(href)
+            </code></pre>
+            <p lead>Intercept link clicks and load the destination within this webview</p>
           </div>
         </slyd>
 
