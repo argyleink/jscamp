@@ -680,6 +680,9 @@
             <h2 class="text_color-1">Lazy Candidates</h2>
             <ul>
               <li>Uncriticals</li>
+              <li>Nice to have glyphs</li>
+              <li>Interaction required components</li>
+              <li>3rd party</li>
             </ul>
           </div>
         </slyd>
@@ -722,6 +725,8 @@
         <slyd id="paintholding-nice">
           <div v-list>
             <h2 class="text_color-1">nice to have</h2>
+            <h3>not critical, we've covered our bases</h3>
+            <p lead>more benefits for !prototypes, but worth talking about</p>
           </div>
         </slyd>
 
@@ -740,8 +745,7 @@
 
         <slyd id="system-fonts">
           <div v-list>
-            <h2 class="text_color-1">System Fonts</h2>
-            <!-- <h3>As much as possible</h3> -->
+            <h2 class="text_color-1" push-bottom="2">System Fonts</h2>
             <pre class="language-css line-numbers show-language"><code>
               body {
                 font-family: system-ui, 
@@ -750,24 +754,25 @@
                   Noto Sans, sans-serif, 
                   Segoe UI, Roboto, Ubuntu, 
                   Cantarell, Noto Sans, 
-                  sans-serif
-                ;
+                  sans-serif;
               }
             </code></pre>
+            <p lead>Boot faster <em>&</em> look native</p>
           </div>
         </slyd>
 
         <slyd id="fonts-custom">
           <div v-list>
             <h2 class="text_color-1">Custom Fonts</h2>
-            <h3>preload</h3>
+            <p lead>If you must have them, leverage preload and caching</p>
+            <h5>Consider front loading</h5>
           </div>
         </slyd>
 
         <slyd id="fonts-lazy">
           <div v-list>
             <h2 class="text_color-1">Lazy Load</h2>
-            <h3>Non critical glyphs or whole families</h3>
+            <p lead>Non critical glyphs or whole families of a font can be loaded after the intial page load</p>
           </div>
         </slyd>
 
@@ -780,24 +785,26 @@
           <span class="slide-no">14</span>
           <div v-list>
             <h1 bold>CSS</h1>
-            <h2>illusion polish</h2>
+            <h2>Magic polish</h2>
           </div>
         </slyd>
 
         <slyd id="css-standalone">
           <div v-list>
-            <h2 class="text_color-1">Detection</h2>
+            <h2 class="text_color-1" push-bottom="1">Detection</h2>
             <pre class="language-css line-numbers show-language"><code>
-              @media all and (display-mode: standalone) {
+              @media (display-mode: standalone) {
                 ...
               }
             </code></pre>
+            <p lead push-top="2">Adjustments only if</p>
           </div>
         </slyd>
 
         <slyd id="css-scrollview">
           <div v-list>
             <h2 class="text_color-1">Scrollviews</h2>
+            <h3 push-top="0" push-bottom="1">get that native scroll</h3>
             <pre class="language-css line-numbers show-language"><code>
               .scrollview {
                 overflow-y: scroll;
@@ -809,35 +816,48 @@
 
         <slyd id="css-text-selection">
           <div v-list>
-            <h2 class="text_color-1">Text Selection</h2>
+            <h2 class="text_color-1" push-bottom="1">Text Selection</h2>
             <pre class="language-css line-numbers show-language"><code>
               body {
                 -webkit-user-select: none;
               }
             </code></pre>
+            <img loading="lazy" src="./images/text-selection.gif">
           </div>
         </slyd>
 
-        <slyd id="css-tap-highlight">
+        <slyd id="css-tap-highlight" side-by-side>
           <div v-list>
             <h2 class="text_color-1">Tap Highlight</h2>
-            <pre class="language-css line-numbers show-language"><code>
+            <pre class="language-css line-numbers show-language" no-depth><code>
               body {
                 -webkit-tap-highlight-color: transparent;
               }
             </code></pre>
           </div>
+          <figure>
+            <img loading="lazy" src="./images/tap-highlight.gif">
+            <figcaption>
+              <a href="https://dev.to/oskarlarsson/designing-native-like-progressive-web-apps-for-ios-510o">Source</a>
+            </figcaption>
+          </figure>
         </slyd>
 
-        <slyd id="css-callouts">
+        <slyd id="css-callouts" side-by-side>
           <div v-list>
             <h2 class="text_color-1">Callouts</h2>
-            <pre class="language-css line-numbers show-language"><code>
+            <pre class="language-css line-numbers show-language" no-depth><code>
               body {
                 -webkit-touch-callout: none;
               }
             </code></pre>
           </div>
+          <figure>
+            <img loading="lazy" src="./images/callouts.png">
+            <figcaption>
+              <a href="https://dev.to/oskarlarsson/designing-native-like-progressive-web-apps-for-ios-510o">Source</a>
+            </figcaption>
+          </figure>
         </slyd>
 
         <slyd id="css-active-n-hover">
@@ -868,14 +888,9 @@
 
         <slyd id="css-snap-points">
           <div v-list>
-            <h2 class="text_color-1">Snap Points</h2>
+            <h2 class="text_color-1" push-bottom="1">Snap Points</h2>
             <pre class="language-css line-numbers show-language"><code>
               .filmstrip {
-                display: grid;
-                grid-auto-flow: column;
-                grid-auto-columns: 20rem;
-                grid-template-rows: 50vh;
-
                 overflow-x: scroll;
                 overscroll-behavior-x: contain;
                 scroll-snap-type: x mandatory;
@@ -890,11 +905,11 @@
 
         <slyd id="css-image-height">
           <div v-list>
-            <h2 class="text_color-1">&#60;img /&#62; Height</h2>
+            <h2 class="text_color-1" push-bottom="2">&#60;img /&#62; Height</h2>
             <pre class="language-html line-numbers show-language"><code>
               &#60;img src="logo.png" height="50px" /&#62;
             </code></pre>
-            <p lead><b>Jank Prevention:</b> page can account for image height before image load</p>
+            <p lead><b>Jank Prevention:</b> jumpless</p>
           </div>
         </slyd>
 
@@ -914,14 +929,22 @@
         <slyd id="retina-prepare">
           <div v-list>
             <h2 class="text_color-1">Prepare</h2>
-            <h3>Optimize, crunch, process</h3>
+            <h3>optimize › crunch › process</h3>
+            <p lead>host on the edge</p>
           </div>
         </slyd>
 
         <slyd id="retina-picture">
           <div v-list>
-            <h2 class="text_color-1">&#60;picture&#62;</h2>
-            <h3>let browser pick</h3>
+            <h2 class="text_color-1" push-bottom="1">&#60;picture&#62;</h2>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;picture&#62;
+                &#60;source type="image/webp" srcset="...@2x.webp 2x, ...@1x.webp 1x"/&#62; 
+                &#60;source type="image/png" srcset="...@2x.png 2x, ...@1x.png 1x"/&#62;
+                &#60;img height="200" src="..." alt="..." loading="lazy"&#62;
+              &#60;/picture&#62;
+            </code></pre>
+            <p lead push-top="2">let the browser pick the best</p>
           </div>
         </slyd>
 
@@ -945,19 +968,19 @@
           <span class="slide-no">16</span>
           <div v-list>
             <h1 bold>Pull 2 Refresh</h1>
-            <h2>You may or may not want this</h2>
+            <h2>Can ruin the illusion</h2>
           </div>
         </slyd>
 
         <slyd id="p2r-prevention">
           <div v-list>
-            <h2 class="text_color-1">Chromium</h2>
+            <h2 class="text_color-1" push-bottom="1">Chromium</h2>
             <pre class="language-css line-numbers show-language"><code>
               .scrollview { 
                 overscroll-behavior-y: contain;
               }
             </code></pre>
-            <p lead>Keep the glow and prevent the navigational features</p>
+            <p lead>Keep the glow & stop navigational features</p>
           </div>
         </slyd>
 
@@ -985,8 +1008,8 @@
           <div v-list>
             <h2 class="text_color-1" push-bottom="1">Stay in app</h2>
             <pre class="language-js line-numbers show-language"><code>
-              event.preventDefault()
-              const { href } = link_element
+              const { preventDefault, target: {href} } = event
+              preventDefault()
               location.assign(href)
             </code></pre>
             <p lead>Intercept link clicks and load the destination within this webview</p>
@@ -1006,8 +1029,7 @@
           </div>
         </slyd>
 
-        <slyd id="offline-ux-navigator">
-          <!-- <iframe background-video loading="lazy" src="https://www.youtube.com/embed/gVebPEYiq2o?controls=0&autoplay=1&loop=1&rel=0" frameborder="0" allow="loop; autoplay; encrypted-media;"></iframe> -->
+        <slyd id="offline-ux-navigator" style="--image: url(https://media.giphy.com/media/htikN9dpbSDuBheqRd/giphy.gif); --darkness: 0%;">
           <div class="backdrop"></div>
           <div v-list>
             <pre class="language-js line-numbers show-language"><code>
@@ -1050,7 +1072,7 @@
         
         <slyd id="recap">
           <div v-list>
-            <small>that was..</small>
+            <h5>that was..</h5>
             <h1 bold>18 steps</h1>
             <h2>to a seamless PWototype</h2>
           </div>
@@ -1073,11 +1095,11 @@
             <li>lazy load</li>
             <li>paint holding</li>
             <li>fonts</li>
-            <li>css</li>
+            <li>CSS</li>
             <li>retina</li>
             <li>pull to refresh</li>
             <li>iOS links</li>
-            <li>offline ux</li>
+            <li>offline UX</li>
           </ul>
         </slyd>
 
