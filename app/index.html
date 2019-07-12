@@ -426,7 +426,7 @@
         <slyd id="pwa-required">
           <div v-list>
             <h2 class="text_color-1">PWA requirement</h2>
-            <p lead>Not just a blocker to features, it's a requirement for promotion</p>
+            <p lead>Not just a blocker to features, it's a <span highlight>requirement for promotion</span></p>
           </div>
         </slyd>
 
@@ -452,47 +452,77 @@
 
         <slyd id="cache-asap">
           <div v-list>
-            <h2 class="text_color-1">Cache ASAP</h2>
-            <h3>No execution</h3>
-            <!-- todo: snippet -->
+            <h2 class="text_color-1">Preload</h2>
+            <h3 push-top="0" push-bottom="1">Cache ASAP, <b>NO</b> execution</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="preload" href="..." as="style"&#62;
+              &#60;link rel="preload" href="..." as="font" type="font/woff2" crossorigin&#62;
+              &#60;link rel="preload" href="..." as="script"&#62;
+              &#60;link rel="preload" href="..." as="image"&#62;
+            </code></pre>
+            <p lead push-top="2"><b>NO</b> delaying the page's onload</p>
           </div>
         </slyd>
 
         <slyd id="preload-good-for">
           <div v-list>
+            <h2 bold uppercase>Good for:</h2>
             <ul>
-              <li>Above the fold</li>
+              <li bold>Above the fold</li>
               <li>Critical CSS</li>
-              <li>Critical Scripts</li>
-              <li>Critical Fonts</li>
+              <li>Critical fonts</li>
+              <li>Critical graphics</li>
+              <li>Critical scripts?</li>
             </ul>
           </div>
         </slyd>
 
-        <slyd id="preload-prefetch">
+        <slyd id="prefetch">
           <div v-list>
             <h2 class="text_color-1">Prefetch</h2>
-            <h3>Lowest priority items</h3>
-            <!-- todo: snippet -->
+            <h3 push-top="0" push-bottom="1">Lower priority items</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="prefetch" href="..." as="style"&#62;
+              &#60;link rel="prefetch" href="..." as="font" type="font/woff2" crossorigin&#62;
+              &#60;link rel="prefetch" href="..." as="script"&#62;
+              &#60;link rel="prefetch" href="..." as="image"&#62;
+            </code></pre>
+            <p lead push-top="2">Fetch while chillin</p>
           </div>
         </slyd>
 
         <slyd id="preload-dns-prefetch">
           <div v-list>
             <h2 class="text_color-1">DNS Prefetch</h2>
-            <h3>3rd party dependencies</h3>
-            <!-- todo: snippet -->
+            <h3 push-top="0" push-bottom="1">Known off origin deps</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="dns-prefetch" href="..."&#62;
+              &#60;link rel="preconnect" href="..."&#62;
+            </code></pre>
+            <p lead push-top="2">3rd party dependencies?</p>
           </div>
         </slyd>
 
         <slyd id="preload-media-queries">
           <div v-list>
             <h2 class="text_color-1">Media Query</h2>
-            <pre class="language-html line-numbers show-language" no-depth><code>
-              &#60;link rel="preload" as="style" href="portrait.css" media="(orientation: portrait)"&#62;
-              &#60;link rel="preload" as="script" href="effect.js" media="(min-width: 1200px)"&#62;
+            <h3 push-top="0" push-bottom="1">conditional preload</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="preload" as="style" href="..." media="(orientation: portrait)"&#62;
+              &#60;link rel="preload" as="script" href="..." media="(min-width: 1200px)"&#62;
             </code></pre>
-            <h3>conditional preload</h3>
+          </div>
+        </slyd>
+
+        <slyd id="browser-prerender">
+          <div v-list>
+            <h2 class="text_color-1">Prerender</h2>
+            <h3 push-top="0" push-bottom="1">entire pages</h3>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="prerender" href="/settings"&#62;
+              &#60;link rel="prerender" href="/about"&#62;
+            </code></pre>
+            <p lead push-top="1">layout › paint › composite,<br>while chillin</p>
           </div>
         </slyd>
 
@@ -511,25 +541,47 @@
 
         <slyd id="defer-bundles">
           <div v-list>
-            <h2 class="text_color-1">Bundle loading</h2>
-            <pre class="language-html line-numbers show-language" no-depth><code>
+            <h2 class="text_color-1">Fetch These</h2>
+            <h3 push-top="0" push-bottom="1">asynchronously OR deferred</h3>
+            <pre class="language-html line-numbers show-language"><code>
               &#60;script defer src="..." type="module"&#62;&#60;/script&#62;
               &#60;script async src="..." type="module"&#62;&#60;/script&#62;
+              
+              &#60;link rel="preload" as="style" href="..." 
+                onload="this.rel='stylesheet'"&#62;
             </code></pre>
+            <p lead push-top="2">non-blocking resource loading</p>
           </div>
         </slyd>
 
         <slyd id="defer-vs-async">
           <div v-list>
             <h3 bold class="text_color-1" uppercase>defer</h3>
-            <p lead>Load async &<br><span highlight>execute in the order recieved</span></p>
+            <p lead>Load async, then =><br><span highlight>execute in the order recieved</span></p>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;script defer src="..." type="module"&#62;&#60;/script&#62;
+            </code></pre>
           </div>
         </slyd>
 
         <slyd id="defer-async">
           <div v-list>
             <h3 bold class="text_color-1" uppercase>async</h3>
-            <p lead>Load async &<br><span highlight>execute immediately</span></p>
+            <p lead>Load async, then =><br><span highlight>execute immediately</span></p>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;script async src="..." type="module"&#62;&#60;/script&#62;
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="defer-css">
+          <div v-list>
+            <h3 bold class="text_color-1" uppercase>async CSS</h3>
+            <p lead>Load async, then =><br><span highlight>apply immediately</span></p>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;link rel="preload" as="style" href="..." 
+                onload="this.rel='stylesheet'"&#62;
+            </code></pre>
           </div>
         </slyd>
 
@@ -542,28 +594,60 @@
           <span class="slide-no">10</span>
           <div v-list>
             <h1 capitalize bold>service worker</h1>
-            <h2>cache money</h2>
+            <h2>Cache money</h2>
           </div>
         </slyd>
 
         <slyd id="service-worker-static">
           <div v-list>
-            <h2 class="text_color-1" capitalize>static files</h2>
-            <h3>cache em</h3>
+            <h2 class="text_color-1" push-bottom="1" capitalize>static files</h2>
+            <pre class="language-js line-numbers show-language"><code>
+              // service-worker.js
+
+              workbox.routing.registerRoute(
+                /\.(?:js|css)$/,
+                new workbox.strategies.StaleWhileRevalidate(),
+              );
+            </code></pre>
+          </div>
+        </slyd>
+
+        <slyd id="service-worker-media">
+          <div v-list>
+            <h2 class="text_color-1" push-bottom="1" capitalize>media files</h2>
+            <pre class="language-js line-numbers show-language"><code>
+              // service-worker.js
+
+              workbox.routing.registerRoute(
+                /\.(?:png|gif|jpg|jpeg|svg)$/,
+                new workbox.strategies.CacheFirst({
+                  cacheName: 'images',
+                }),
+              ); 
+            </code></pre>
           </div>
         </slyd>
 
         <slyd id="service-worker-dynamic">
           <div v-list>
             <h2 class="text_color-1" capitalize>dynamic files</h2>
-            <h3>try not to</h3>
+            <h1>🤷‍♂️</h1>
           </div>
         </slyd>
 
         <slyd id="service-worker-push">
           <div v-list>
-            <h2 class="text_color-1" capitalize>push notifications</h2>
-            <h3>adds a nice touch</h3>
+            <h2 class="text_color-1" push-bottom="1" capitalize>push notifications</h2>
+            <pre class="language-js line-numbers show-language"><code>
+              const localPush = async () => {
+                const swRegistration = await navigator.serviceWorker.register('...')
+
+                swRegistration.showNotification('...', {
+                  body, icon, image, vibrate, // etc...
+                });
+              }
+            </code></pre>
+            <p lead push-top="2">Can add a nice touch</p>
           </div>
         </slyd>
 
@@ -576,41 +660,43 @@
           <span class="slide-no">11</span>
           <div v-list>
             <h1 bold>Lazy Load</h1>
-            <h2>Optimize for first paint</h2>
+            <h2>Optimize for time to first paint</h2>
           </div>
         </slyd>
 
-        <slyd id="lazyload-categories">
+        <slyd id="lazyload-hooks" side-by-side>
           <div v-list>
-            <ul>
+            <h2 class="text_color-1">Lazy Hooks</h2>
+            <ol>
               <li>Time</li>
-              <li>Event</li>
-              <li>Hint</li>
+              <li>Events</li>
+              <li>Hints</li>
+            </ol>
+          </div>
+        </slyd>
+
+        <slyd id="lazyload-candidates" side-by-side>
+          <div v-list>
+            <h2 class="text_color-1">Lazy Candidates</h2>
+            <ul>
+              <li>Uncriticals</li>
             </ul>
           </div>
         </slyd>
 
-        <slyd id="lazyload-uncriticals">
+        <slyd id="lazyload-tactics" side-by-side>
           <div v-list>
-            <h2 class="text_color-1">uncriticals</h2>
-          </div>
-        </slyd>
-
-        <slyd id="lazyload-css">
-          <div v-list>
-            <h2 class="text_color-1">lazy load css</h2>
-          </div>
-        </slyd>
-
-        <slyd id="lazyload-js">
-          <div v-list>
-            <h2 class="text_color-1">lazy load js</h2>
-          </div>
-        </slyd>
-
-        <slyd id="lazyload-media">
-          <div v-list>
-            <h2 class="text_color-1">lazy load media</h2>
+            <h2 class="text_color-1">Lazy Tactics</h2>
+            <ul>
+              <li>Libs</li>
+              <li>Dynamic import</li>
+              <li>Attributes</li>
+            </ul>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;img loading="lazy" src="..."&#62;
+              &#60;video loading="lazy" src="..."&#62;
+              &#60;iframe loading="lazy" src="..."&#62;
+            </code></pre>
           </div>
         </slyd>
 
@@ -802,6 +888,16 @@
           </div>
         </slyd>
 
+        <slyd id="css-image-height">
+          <div v-list>
+            <h2 class="text_color-1">&#60;img /&#62; Height</h2>
+            <pre class="language-html line-numbers show-language"><code>
+              &#60;img src="logo.png" height="50px" /&#62;
+            </code></pre>
+            <p lead><b>Jank Prevention:</b> page can account for image height before image load</p>
+          </div>
+        </slyd>
+
       </slyds>
 
       <!-- section 15: retina -->
@@ -911,7 +1007,7 @@
         </slyd>
 
         <slyd id="offline-ux-navigator">
-          <iframe background-video loading="lazy" src="https://www.youtube.com/embed/gVebPEYiq2o?controls=0&autoplay=1&loop=1&rel=0" frameborder="0" allow="loop; autoplay; encrypted-media;"></iframe>
+          <!-- <iframe background-video loading="lazy" src="https://www.youtube.com/embed/gVebPEYiq2o?controls=0&autoplay=1&loop=1&rel=0" frameborder="0" allow="loop; autoplay; encrypted-media;"></iframe> -->
           <div class="backdrop"></div>
           <div v-list>
             <pre class="language-js line-numbers show-language"><code>
