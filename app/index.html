@@ -41,13 +41,26 @@
           </div>
         </slyd>
 
+        <slyd id="why">
+          <div v-list>
+            <h2 class="text_color-1">Why?</h2>
+            <ol>
+              <li>User testing</li>
+              <li>Get funding</li>
+              <li>Sell a client</li>
+            </ol>
+            <p lead push-top="2" push-bottom="0">UX flow worth 1k words</p>
+            <p push-top="0">Prototype worth 1k meetings</p>
+          </div>
+        </slyd>
+
         <slyd id="how">
           <div v-list>
             <h2 class="text_color-1">How</h2>
             <ol>
               <li>A manifest</li>
               <li>Static assets</li>
-              <li>The platform</li>
+              <li>The Web</li>
             </ol>
           </div>
         </slyd>
@@ -55,7 +68,8 @@
         <slyd id="proof" two-up-video-right>
           <div v-list>
             <h2 class="brand_color-1">Proof</h2>
-            <p lead text-left>Fooled clients and bosses for many moons with prototypes like this</p>
+            <p lead text-left>I've fooled clients & bosses with prototypes like this</p>
+            <a href="https://coinsafe.netlify.com">coinsafe.netlify.com</a>
           </div>
           <video fit-height src="./videos/coinsafe-demo.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
@@ -92,7 +106,7 @@
         <slyd id="manifest-name">
           <div v-list>
             <h3 push-bottom="2" class="text_color-1">App Name</h3>
-            <pre class="language-json line-numbers show-language"><code>
+            <pre class="language-js line-numbers show-language"><code>
               {
                 "name": "YOUR_APP",
                 "short_name": "YOUR_APP",
@@ -105,7 +119,7 @@
         <slyd id="manifest-theme">
           <div v-list>
             <h3 push-bottom="2" class="text_color-1">App Theme</h3>
-            <pre class="language-json line-numbers show-language"><code>
+            <pre class="language-js line-numbers show-language"><code>
               {
                 "theme_color": "#ffffff",
                 "background_color": "#ffffff",
@@ -118,7 +132,7 @@
         <slyd id="manifest-brand">
           <div v-list>
             <h3 push-bottom="2" class="text_color-1">App Icons</h3>
-            <pre class="language-json line-numbers show-language"><code>
+            <pre class="language-js line-numbers show-language"><code>
               {
                 "icons": [
                   {
@@ -137,7 +151,7 @@
         <slyd id="manifest-extras">
           <div v-list>
             <h3 push-bottom="2" class="text_color-1">PWA Extras</h3>
-            <pre class="language-json line-numbers show-language"><code>
+            <pre class="language-js line-numbers show-language"><code>
               {
                 "display": "standalone",
                 "orientation": "portrait",
@@ -152,11 +166,12 @@
           <div v-list>
             <h2 class="text_color-1">Verify</h2>
             <p lead text-left>Chrome Devtools can verify your work before you install on a device</p>
+            <img width="350" src="./images/lighthouse.png" loading="lazy">
           </div>
-          <img fit-height src="#" loading="lazy"/>
+          <img style="width:39vw;" fit-height src="./images/manifest-devtools.png" loading="lazy"/>
         </slyd>
 
-        <slyd id="manifest-value-demo" three-up>
+        <!-- <slyd id="manifest-value-demo" three-up>
           <video fit-height src="./videos/android-pwa-verify.mp4" loading="lazy" autoplay muted loop controls></video>
           <div v-list between>
             <h4 arrow-left>
@@ -173,7 +188,7 @@
             </h4>
           </div>
           <video fit-height src="./videos/ios-pwa-verify.mp4" loading="lazy" autoplay muted loop controls></video>
-        </slyd>
+        </slyd> -->
 
       </slyds>
 
@@ -258,12 +273,6 @@
           <img fit-height src="./images/icon-keylines.png" alt="">
         </slyd>
 
-        <slyd id="icons-demo">
-          <div v-list>
-            <h2 class="text_color-1">demo</h2>
-          </div>
-        </slyd>
-
         <slyd id="icons-tips">
           <div v-list>
             <h2 class="text_color-1">Tips n' Tricks</h2>
@@ -292,19 +301,22 @@
           </div>
         </slyd>
 
-        <slyd id="splash-demo">
-          <div v-list>
-            <h2 class="text_color-1">demo</h2>
-          </div>
-        </slyd>
-
         <slyd id="splash-tips">
           <div v-list>
-            <h2 class="text_color-1">Tips n' Tricks</h2>
+            <h2 class="text_color-1">iOS Tips n' Tricks</h2>
             <ul>
               <li>Generator sites</li>
               <li>Build scripts</li>
-              <li>Android & Windows</li>
+            </ul>
+          </div>
+        </slyd>
+
+        <slyd id="splash-android">
+          <div v-list>
+            <h2 class="text_color-1">Tips n' Tricks</h2>
+            <ul>
+              <li>Manifest + icons</li>
+              <li>Not in full control</li>
             </ul>
           </div>
         </slyd>
@@ -335,16 +347,10 @@
           </div>
         </slyd>
 
-        <slyd id="prerender-demo">
-          <div v-list>
-            <h2 class="text_color-1">demo</h2>
-          </div>
-        </slyd>
-
         <slyd id="prerender-results">
           <div v-list>
             <h2 class="text_color-1">Goal</h2>
-            <p>Maintain an <span highlight>illusion</span>, <br>not building for production</p>
+            <p>Maintain an <span highlight>illusion</span>, <br>not build for production</p>
             <p lead>JAMstack to SPA (or JAMSPA 😏) are valid <b>HTML experience creation</b> options</p>
           </div>
         </slyd>
@@ -452,7 +458,7 @@
         <slyd id="cache-asap">
           <div v-list>
             <h2 class="text_color-1">Preload</h2>
-            <h3 push-top="0" push-bottom="1">Cache ASAP, <b>NO</b> execution</h3>
+            <h3 push-top="0" push-bottom="2" class="text_color-2">Cache ASAP, <b>NO</b> execution</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;link rel="preload" href="..." as="style"&#62;
               &#60;link rel="preload" href="..." as="font" type="font/woff2" crossorigin&#62;
@@ -479,7 +485,7 @@
         <slyd id="prefetch">
           <div v-list>
             <h2 class="text_color-1">Prefetch</h2>
-            <h3 push-top="0" push-bottom="1">Lower priority items</h3>
+            <h3 push-top="0" push-bottom="2" class="text_color-2">Lower priority items</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;link rel="prefetch" href="..." as="style"&#62;
               &#60;link rel="prefetch" href="..." as="font" type="font/woff2" crossorigin&#62;
@@ -493,7 +499,7 @@
         <slyd id="preload-dns-prefetch">
           <div v-list>
             <h2 class="text_color-1">DNS Prefetch</h2>
-            <h3 push-top="0" push-bottom="1">Known off origin deps</h3>
+            <h3 push-top="0" push-bottom="2" class="text_color-2">Known off origin deps</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;link rel="dns-prefetch" href="..."&#62;
               &#60;link rel="preconnect" href="..."&#62;
@@ -515,13 +521,20 @@
 
         <slyd id="browser-prerender">
           <div v-list>
-            <h2 class="text_color-1">Prerender</h2>
-            <h3 push-top="0" push-bottom="1">entire pages</h3>
-            <pre class="language-html line-numbers show-language"><code>
-              &#60;link rel="prerender" href="/settings"&#62;
-              &#60;link rel="prerender" href="/about"&#62;
+            <h2 class="text_color-1"><span style="text-decoration: line-through;">Prerender</span> Precache</h2>
+            <h3 push-top="0" push-bottom="2" class="text_color-2">all page resources</h3>
+            <pre class="language-js line-numbers show-language"><code>
+              importScripts('.../workbox-sw.js');
+
+              workbox.precaching.precacheAndRoute([
+                'index.html',
+                '/common.bundle.js',
+                '/app.bundle.js',
+                '/app.bundle.css',
+                '/images/hero.png',
+                ...
+              ])
             </code></pre>
-            <p lead push-top="1">layout › paint › composite,<br>while chillin</p>
           </div>
         </slyd>
 
@@ -541,9 +554,10 @@
         <slyd id="defer-bundles">
           <div v-list>
             <h2 class="text_color-1">Fetch These</h2>
-            <h3 push-top="0" push-bottom="1">asynchronously OR deferred</h3>
+            <h3 push-top="0" push-bottom="2" class="text_color-2">asynchronously OR deferred</h3>
             <pre class="language-html line-numbers show-language"><code>
-              &#60;script defer src="..." type="module"&#62;&#60;/script&#62;
+              &#60;script defer src="..."&#62;&#60;/script&#62;
+              &#60;script src="..." type="module"&#62;&#60;/script&#62;
               &#60;script async src="..." type="module"&#62;&#60;/script&#62;
               
               &#60;link rel="preload" as="style" href="..." 
@@ -558,7 +572,8 @@
             <h3 bold class="text_color-1" uppercase>defer</h3>
             <p lead>Load async, then =><br><span highlight>execute in the order recieved</span></p>
             <pre class="language-html line-numbers show-language"><code>
-              &#60;script defer src="..." type="module"&#62;&#60;/script&#62;
+              &#60;script defer src="..."&#62;&#60;/script&#62;
+              &#60;script src="..." type="module"&#62;&#60;/script&#62;
             </code></pre>
           </div>
         </slyd>
@@ -568,6 +583,7 @@
             <h3 bold class="text_color-1" uppercase>async</h3>
             <p lead>Load async, then =><br><span highlight>execute immediately</span></p>
             <pre class="language-html line-numbers show-language"><code>
+              &#60;script async src="..."&#62;&#60;/script&#62;
               &#60;script async src="..." type="module"&#62;&#60;/script&#62;
             </code></pre>
           </div>
@@ -636,7 +652,7 @@
 
         <slyd id="service-worker-push">
           <div v-list>
-            <h2 class="text_color-1" push-bottom="1" capitalize>push notifications</h2>
+            <h2 class="text_color-1" push-bottom="2" capitalize>push notifications</h2>
             <pre class="language-js line-numbers show-language"><code>
               const localPush = async () => {
                 const swRegistration = await navigator.serviceWorker.register('...')
@@ -715,10 +731,23 @@
           </div>
         </slyd>
 
-        <slyd id="paintholding-demo">
-          <div v-list>
-            <h2 class="text_color-1">demo</h2>
+        <slyd id="paintholding-demo" three-up>
+          <video fit-height src="./videos/without-paint-holding.mp4" loading="lazy" autoplay muted loop controls></video>
+          <div v-list between>
+            <h4 arrow-left>
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+              Without
+            </h4>
+            <h4 arrow-right>
+              With
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M20.016 12l-8.016 8.016-8.016-8.016 1.453-1.406 5.578 5.578v-12.188h1.969v12.188l5.625-5.578z"></path>
+              </svg>
+            </h4>
           </div>
+          <video fit-height src="./videos/with-paint-holding.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
 
         <slyd id="paintholding-nice">
@@ -763,8 +792,15 @@
         <slyd id="fonts-custom">
           <div v-list>
             <h2 class="text_color-1">Custom Fonts</h2>
-            <p lead>If you must have them, leverage preload and caching</p>
+            <p lead>Leverage preload and caching</p>
             <h5>Consider front loading</h5>
+          </div>
+        </slyd>
+
+        <slyd id="fonts-variable">
+          <div v-list>
+            <h2 class="text_color-1">Variable Fonts</h2>
+            <p lead>1 font to rule them all</p>
           </div>
         </slyd>
 
@@ -790,7 +826,7 @@
 
         <slyd id="css-standalone">
           <div v-list>
-            <h2 class="text_color-1" push-bottom="1">Detection</h2>
+            <h2 class="text_color-1" push-bottom="2">Detection</h2>
             <pre class="language-css line-numbers show-language"><code>
               @media (display-mode: standalone) {
                 ...
@@ -803,7 +839,7 @@
         <slyd id="css-scrollview">
           <div v-list>
             <h2 class="text_color-1">Scrollviews</h2>
-            <h3 push-top="0" push-bottom="1">get that native scroll</h3>
+            <h3 push-top="0" push-bottom="1" class="text_color-2">get that native scroll</h3>
             <pre class="language-css line-numbers show-language"><code>
               .scrollview {
                 overflow-y: scroll;
@@ -902,13 +938,14 @@
           </div>
         </slyd>
 
-        <slyd id="css-image-height">
+        <slyd id="css-image-sizing">
           <div v-list>
-            <h2 class="text_color-1" push-bottom="2">&#60;img /&#62; Height</h2>
+            <h2 class="text_color-1" push-bottom="0">&#60;img /&#62;</h2>
+            <p push-top="0">Set sizes inline</p>
             <pre class="language-html line-numbers show-language"><code>
               &#60;img src="logo.png" height="50px" /&#62;
             </code></pre>
-            <p lead><b>Jank Prevention:</b> jumpless</p>
+            <p lead push-top="2"><b>Jank Prevention:</b> jumpless</p>
           </div>
         </slyd>
 
@@ -928,7 +965,7 @@
         <slyd id="retina-prepare">
           <div v-list>
             <h2 class="text_color-1">Prepare</h2>
-            <h3>optimize › crunch › process</h3>
+            <h3 class="brand_color-2">optimize › crunch › process</h3>
             <p lead>host on the edge</p>
           </div>
         </slyd>
@@ -1005,13 +1042,20 @@
 
         <slyd id="ios-links-snippet">
           <div v-list>
-            <h2 class="text_color-1" push-bottom="1">Stay in app</h2>
-            <pre class="language-js line-numbers show-language"><code>
+            <h2 class="text_color-1" push-bottom="2">Stay in app</h2>
+            <!-- <pre class="language-js line-numbers show-language"><code>
               const { preventDefault, target: {href} } = event
               preventDefault()
               location.assign(href)
+            </code></pre> -->
+            <pre class="language-js line-numbers show-language"><code>
+              {
+                "name": "Coinsafe",
+                "short_name": "Coinsafe",
+                "start_url": "/index.html"
+              }
             </code></pre>
-            <p lead>Intercept link clicks and load the destination within this webview</p>
+            <p lead push-top="2">load the destination within this webview</p>
           </div>
         </slyd>
 
@@ -1083,11 +1127,11 @@
             <li>&#60;meta&#62;</li>
             <li>icons</li>
             <li>splash</li>
-            <li>prerender</li>
             <li>bundle</li>
             <li>HTTPS</li>
-            <li>preload</li>
             <li>defer</li>
+            <li>preload</li>
+            <li>precache</li>
           </ul>
           <ul style="margin:0;">
             <li>service workers</li>
@@ -1105,7 +1149,7 @@
         <slyd id="healthy-tasks">
           <div v-list>
             <h2 class="text_color-1">Healthy Apps</h2>
-            <p lead>these implementation details are good for any project</p>
+            <p lead>these implementation details are <span highlight>good for any project</span></p>
           </div>
         </slyd>
 
