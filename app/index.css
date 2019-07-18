@@ -10,6 +10,10 @@ code[class*="language-"], pre[class*="language-"] {
   --fluid-type-max-screen: 70;
 }
 
+p[lead] {
+  font-weight: 100;
+}
+
 slyd {
   background-image: 
     radial-gradient(circle, hsla(0,0%,0%,var(--darkness)) 0%, hsla(0,0%,0%,var(--darkness)) 100%),
@@ -48,6 +52,7 @@ video {
 
   &[fit-height] {
     height: 100%;
+    width: auto;
   }
 }
 

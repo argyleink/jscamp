@@ -62,14 +62,15 @@
               <li>Static assets</li>
               <li>The Web</li>
             </ol>
+            <p lead push-top="2">optimize for first paint</p>
           </div>
         </slyd>
 
         <slyd id="proof" two-up-video-right>
-          <div v-list>
-            <h2 class="brand_color-1">Proof</h2>
-            <p lead text-left>I've fooled clients & bosses with prototypes like this</p>
-            <a href="https://coinsafe.netlify.com">coinsafe.netlify.com</a>
+          <div v-list text-left top>
+            <h2 no-depth class="brand_color-1">Try It</h2>
+            <p lead>I've fooled clients & bosses with prototypes like this</p>
+            <a no-depth href="https://coinsafe.netlify.com">coinsafe.netlify.com</a>
           </div>
           <video fit-height src="./videos/coinsafe-demo.mp4" loading="lazy" autoplay muted loop controls></video>
         </slyd>
@@ -223,7 +224,7 @@
               &#60;meta name="mobile-web-app-capable" content="yes" /&#62;
               &#60;meta name="application-name" content="YOUR_APP" /&#62;
             </code></pre>
-            <ul push-top="2">
+            <ul push-top="1">
               <li>Legacy?</li>
               <li>Fullscreen</li>
               <li>Links need love</li>
@@ -233,13 +234,13 @@
 
         <slyd id="meta-theme">
           <div v-list>
-            <h3 push-bottom="2" class="text_color-1">App Theme</h3>
+            <h3 push-bottom="3" class="text_color-1">App Theme</h3>
             <pre class="language-html line-numbers show-language"><code>
               &#60;meta name="apple-mobile-web-app-status-bar-style" content="default" /&#62;
               &#60;meta name="theme-color" content="#ffffff" /&#62;
               &#60;meta name="msapplication-TileColor" content="#ffffff" /&#62;
             </code></pre>
-            <img src="./images/status-bar.png" push-top="2">
+            <img src="./images/status-bar.png" push-top="1">
           </div>
         </slyd>
 
@@ -675,7 +676,7 @@
           <span class="slide-no">11</span>
           <div v-list>
             <h1 bold>Lazy Load</h1>
-            <h2>Optimize for time to first paint</h2>
+            <p lead push-top="2">Optimize for first paint</p>
           </div>
         </slyd>
 
@@ -712,7 +713,6 @@
             </ul>
             <pre class="language-html line-numbers show-language"><code>
               &#60;img loading="lazy" src="..."&#62;
-              &#60;video loading="lazy" src="..."&#62;
               &#60;iframe loading="lazy" src="..."&#62;
             </code></pre>
           </div>
@@ -851,7 +851,7 @@
 
         <slyd id="css-text-selection">
           <div v-list>
-            <h2 class="text_color-1" push-bottom="1">Text Selection</h2>
+            <h2 class="text_color-1" push-bottom="2">Text Selection</h2>
             <pre class="language-css line-numbers show-language"><code>
               body {
                 -webkit-user-select: none;
@@ -871,7 +871,7 @@
             </code></pre>
           </div>
           <figure>
-            <img loading="lazy" src="./images/tap-highlight.gif">
+            <img loading="lazy" src="./images/tap-highlight.gif" style="max-width:100%;">
             <figcaption>
               <a href="https://dev.to/oskarlarsson/designing-native-like-progressive-web-apps-for-ios-510o">Source</a>
             </figcaption>
@@ -888,7 +888,7 @@
             </code></pre>
           </div>
           <figure>
-            <img loading="lazy" src="./images/callouts.png">
+            <img loading="lazy" src="./images/callouts.png" style="max-width:100%;">
             <figcaption>
               <a href="https://dev.to/oskarlarsson/designing-native-like-progressive-web-apps-for-ios-510o">Source</a>
             </figcaption>
@@ -911,7 +911,7 @@
 
         <slyd id="css-sticky">
           <div v-list>
-            <h2 class="text_color-1">Sticky</h2>
+            <h2 class="text_color-1" push-bottom="2">Sticky</h2>
             <pre class="language-css line-numbers show-language"><code>
               header {
                 position: sticky;
@@ -972,7 +972,7 @@
 
         <slyd id="retina-picture">
           <div v-list>
-            <h2 class="text_color-1" push-bottom="1">&#60;picture&#62;</h2>
+            <h2 class="text_color-1" push-bottom="2">&#60;picture&#62;</h2>
             <pre class="language-html line-numbers show-language"><code>
               &#60;picture&#62;
                 &#60;source type="image/webp" srcset="...@2x.webp 2x, ...@1x.webp 1x"/&#62; 
@@ -1029,7 +1029,7 @@
           <span class="slide-no">17</span>
           <div v-list>
             <h1 bold>iOS Links</h1>
-            <h2>taking matters into our own hands</h2>
+            <h2>Stay in app...</h2>
           </div>
         </slyd>
 
@@ -1073,7 +1073,6 @@
         </slyd>
 
         <slyd id="offline-ux-navigator" style="--image: url(https://media.giphy.com/media/htikN9dpbSDuBheqRd/giphy.gif); --darkness: 0%;">
-          <div class="backdrop"></div>
           <div v-list>
             <pre class="language-js line-numbers show-language"><code>
               const { isOnline } = navigator
